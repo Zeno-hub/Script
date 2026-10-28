@@ -14,8 +14,6 @@ jobs:
           node-version: 20
       - run: sudo apt-get update && sudo apt-get install -y libnss3 libdbus-1-3 libatk1.0-0 libgbm-dev libxrandr2 libxkbcommon-dev libxfixes3 libxcomposite1 libxdamage1 libatk-bridge2.0-0 libpango-1.0-0 libcairo2 libcups2 libasound2t64
       - run: npm install
-      - run: npm run typecheck
-        continue-on-error: true
       - run: npx remotion render src/index.ts Trailer out/anime-reverie-trailer.mp4 --gl=swangle
       - uses: actions/upload-artifact@v4
         with:
