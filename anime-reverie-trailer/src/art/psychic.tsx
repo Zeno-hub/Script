@@ -37,7 +37,7 @@ export const PsychicRings: React.FC<{frame: number; intensity: number}> = ({fram
             <feDisplacementMap in="SourceGraphic" in2="n" scale={warp} xChannelSelector="R" yChannelSelector="G" />
           </filter>
         </defs>
-        <g filter="url(#psyWarp)">
+        <g>
           {rings.map((r, i) => (
             <g key={i}>
               <circle cx={WIDTH / 2 - 8} cy={HEIGHT / 2} r={r.r} fill="none" stroke="#5ee7ff" strokeWidth={r.w} opacity={r.o * 0.8} />
