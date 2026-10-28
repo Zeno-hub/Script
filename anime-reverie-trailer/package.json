@@ -1,0 +1,29 @@
+{
+  "name": "anime-reverie-trailer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anime Reverie cinematic trailer, rendered with Remotion (1920x1080, 30 FPS).",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts Trailer out/anime-reverie-trailer.mp4",
+    "render:draft": "remotion render src/index.ts Trailer out/anime-reverie-draft.mp4 --scale=0.5 --crf=26",
+    "still": "remotion still src/index.ts Trailer out/poster.png --frame=2250",
+    "typecheck": "tsc --noEmit",
+    "audio": "python3 tools/make_score.py"
+  },
+  "dependencies": {
+    "@react-three/fiber": "8.17.10",
+    "@remotion/cli": "4.0.200",
+    "@remotion/google-fonts": "4.0.200",
+    "@remotion/three": "4.0.200",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.200",
+    "three": "0.169.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.3.12",
+    "@types/three": "0.169.0",
+    "typescript": "5.6.3"
+  }
+}
